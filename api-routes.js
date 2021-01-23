@@ -12,4 +12,11 @@ router.route('/contacts')
     .get(contactController.index)
     .post(contactController.new);
     
+
+router.route('/contacts/:contact_id')
+    .get(contactController.viewOne)
+    .put(contactController.updateOne)
+    .delete(contactController.deleteContact);
+
+
 module.exports = router;
